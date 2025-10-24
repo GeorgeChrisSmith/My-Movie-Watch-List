@@ -11,7 +11,7 @@ class AnimeList{
 
   // Methods
   // animeRow - generate one row from the array
-  animeRow(index, title, year, watched){
+  animeRow(index, title, year, rating, watched){
     // Get the parent element
     const rootElement = document.getElementById(this.rootId);
 
@@ -20,6 +20,7 @@ class AnimeList{
    const idCell = document.createElement('td');
    const titleCell = document.createElement('td');
    const yearCell = document.createElement('td');
+    const ratingCell = document.createElement('td');
    const watchedCell = document.createElement('td');
     const watchedLabel = document.createElement('label');
 
@@ -39,6 +40,7 @@ class AnimeList{
     idCell.textContent = `${index}.`;
     titleCell.textContent = title;
     yearCell.textContent = year;
+    ratingCell.textContent = rating;
     watchedLabel.textContent = 'Watched:';
     watchedCell.appendChild(watchedLabel);
     watchedCell.appendChild(watchedCheck);
@@ -50,6 +52,7 @@ class AnimeList{
     row.appendChild(idCell);
     row.appendChild(titleCell);
     row.appendChild(yearCell);
+    row.appendChild(ratingCell);
     row.appendChild(watchedCell);
     rootElement.appendChild(row);
   }
@@ -62,7 +65,7 @@ class AnimeList{
       let anime = this.animeList[i];
       console.log(anime);
       // Call the animeRow method to generate a row
-      this.animeRow(i+1, anime.title, anime.year, anime.watched);
+      this.animeRow(i+1, anime.title, anime.year, anime.rating, anime.watched);
     }
   }
   // End genAnimeList method
@@ -76,7 +79,7 @@ class AnimeList{
     for (let i = 0; i < list.length; i++){
       let anime = list[i];
       // Call the animeRow method to generate a row
-      this.animeRow(i+1, anime.title, anime.year, anime.watched);
+      this.animeRow(i + 1, anime.title, anime.year, anime.rating, anime.watched);
     }
   }
   // End genAnimeSearchList(list) method
@@ -109,20 +112,21 @@ class AnimeList{
   // End Refresh Method
 
   // Adding a new anime
-  add(title, year, watched){
+  add(title, year, rating, watched){
     // Add a new anime to the end of the list
-    this.animeList.push({ title: title, year: year, watched: watched});
+    this.animeList.push({ title: title, year: year, rating: rating, watched: watched});
     // (ES6 syntax)
-    // this.animeList.push({ title, year, watched});
+    // this.animeList.push({ title, year, rating, watched});
     this.refresh();
   }
   // End of add method
 
   // update anime
-  update(index, title, year, watched){
+  update(index, title, year, rating, watched){
     // update each value 
     this.animeList[index].title = title;
     this.animeList[index].year = year;
+    this.animeList[index].rating = rating;
     this.animeList[index].watched = watched;
     // refresh the list
     this.refresh();

@@ -2,20 +2,20 @@
 
 // Create our initial array of anime
 let initAnime = [
-  { title: "Cory In The House", year: "2006-2007", watched: true },
-  { title: "Neighbours", year: "1985-2025", watched: true },
-  { title: "Home and Away", year: "1988-Present", watched: true },
-  { title: "Echo Point", year: "1995", watched: true },
-  { title: "Beverly Hills, 90210", year: "1990-2000", watched: true },
-  { title: "Paradise Beach", year: "1993-1994", watched: true },
-  { title: "The Nutshack", year: "2007-2011", watched: true },
-  { title: "Love Live Sunshine!", year: "2016-2017", watched: true },
-  { title: "Heartbreak High", year: "1994-1999", watched: true },
-  { title: "iCarly", year: "2007-2012", watched: true },
-  { title: "NASCAR on Fox", year: "2001-Present", watched: true },
-  { title: "Mater's Drunk Tales", year: "2018-2020", watched: true },
-  { title: "CDs in JackSucksAtLife", year: "2019-2023", watched: true },
-  { title: "JackSucksAtLife in GoAnimate", year: "2023-Present", watched: true },
+  { title: "Muriel's Wedding", year: "1994", rating: "7.3", watched: true },
+  { title: "Music From Another Room", year: "1998", rating: "6.3", watched: true },
+  { title: "The Wizard", year: "1989", rating: "6.1", watched: true },
+  { title: "Paper Planes", year: "2015", rating: "6.2", watched: true },
+  { title: "The Other Sister", year: "1999", rating: "6.4", watched: true },
+  { title: "Red Dog", year: "2011", rating: "7.3", watched: true },
+  { title: "The Club", year: "1980", rating: "6.9", watched: true },
+  { title: "Angry Video Game Nerd: The Movie", year: "2014", rating: "5.4", watched: true },
+  { title: "Oddball", year: "2015", rating: "6.4", watched: true },
+  { title: "The Castle", year: "1997", rating: "7.7", watched: true },
+  { title: "Body Melt", year: "1993", rating: "5.3", watched: true },
+  { title: "Houseboat Horror", year: "1989", rating: "4.0", watched: true },
+  { title: "Super Hornio Brothers", year: "1993", rating: "6.9", watched: true },
+  { title: "Cannibal Holocaust", year: "1980", rating: "5.8", watched: true },
 ];
 
 let animeList = new AnimeList('list', initAnime);
@@ -47,15 +47,17 @@ function addClick(){
   // get the data from the form
   let title = formElements['title'].value;
   let year = formElements['year'].value;
+  let rating = formElements['rating'].value;
   let watched = formElements['watched'].checked; 
 
   // Add in Validation
   // Test the values of the input
 
-  animeList.add(title, Number(year), watched);
+  animeList.add(title, Number(year), Number(rating), watched);
   // Clear the input fields
   formElements.title.value = "";
   formElements.year.value = "";
+  formElements.rating.value = "";
   formElements.watched.checked = false;
 }
 // Update - Update
@@ -66,17 +68,19 @@ function updateClick(){
   let index = formElements['index'].value - 1;
   let title = formElements['title'].value;
   let year = formElements['year'].value;
+  let rating = formElements['rating'].value;
   let watched = formElements['watched'].checked; 
 
   // Add in Validation
   // test the index
   // Test the values of the input
 
-  animeList.update(Number(index), title, Number(year), watched);
+  animeList.update(Number(index), title, Number(year), Number(rating), watched);
   // Clear the input fields
   formElements.index.value = ""
   formElements.title.value = "";
   formElements.year.value = "";
+  formElements.rating.value = "";
   formElements.watched.checked = false;
 }
 // Delete - Delete
