@@ -1,5 +1,66 @@
 
+# 1. Create and switch to a new branch
 git checkout -b Q5-fix
-git add .
-git commit -m "Q5: Complete tasks Q5.1 to Q5.15"
+
+# 2. Commit Q5.1
+git add q5-1.txt
+git commit -m "Q5.1: Record GitHub repository details"
+
+# 3. Commit Q5.2
+git add q5-2.txt
+git commit -m "Q5.2: Gather and confirm UI requirements"
+
+# 4. Commit Q5.3
+git add q5-3.txt
+git commit -m "Q5.3: Record HTML guideline documentation"
+
+# 5. Commit Q5.4
+git add q5-4.txt
+git commit -m "Q5.4: Record software tools for prototype"
+
+# 6. Commit Q5.5
+git add q5-5.txt
+git commit -m "Q5.5: Build wireframe"
+
+# 7. Commit Q5.6
+git add q5-6.txt
+git commit -m "Q5.6: Update wireframe with client feedback"
+
+# 8. Commit Q5.7
+git add q5-7.txt
+git commit -m "Q5.7: Create UI theme"
+
+# 9. Commit Q5.8
+git add q5-8.txt
+git commit -m "Q5.8: Create prototype"
+
+# 10. Commit Q5.9
+git add q5-9.txt
+git commit -m "Q5.9: Update prototype with client feedback"
+
+# 11. Commit Q5.10
+git add q5-10.txt
+git commit -m "Q5.10: Record content flow / UI events"
+
+# 12. Commit Q5.11
+git add q5-11.txt
+git commit -m "Q5.11: Record UI languages"
+
+# 13. Commit Q5.12
+git add q5-12.txt
+git commit -m "Q5.12: Build UI files"
+
+# 14. Commit Q5.13
+git add q5-13.txt
+git commit -m "Q5.13: Develop UI test cases"
+
+# 15. Commit Q5.14
+git add q5-14.txt
+git commit -m "Q5.14: Execute UI tests and iterate"
+
+# 16. Commit Q5.15
+git add q5-15.txt
+git commit -m "Q5.15: Demonstrate application to client"
+
+# 17. Push the branch
 git push origin Q5-fix
