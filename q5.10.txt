@@ -1,0 +1,1 @@
+// Q5.10: Record content flow / UI events
