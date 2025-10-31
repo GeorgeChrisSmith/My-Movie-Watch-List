@@ -1,20 +1,5 @@
+
 git checkout -b Q5-fix
-
-git add q5-1.txt
-git commit -m "Q5.1: Record GitHub repository details"
-git commit -m "Q5.2: Gather and confirm UI requirements"
-git commit -m "Q5.3: Record HTML guideline documentation"
-git commit -m "Q5.4: Record software tools for prototype"
-git commit -m "Q5.5: Build wireframe"
-git commit -m "Q5.6: Update wireframe with client feedback"
-git commit -m "Q5.7: Create UI theme"
-git commit -m "Q5.8: Create prototype"
-git commit -m "Q5.9: Update prototype with client feedback"
-git commit -m "Q5.10: Record content flow / UI events"
-git commit -m "Q5.11: Record UI languages"
-git commit -m "Q5.12: Build UI files"
-git commit -m "Q5.13: Develop UI test cases"
-git commit -m "Q5.14: Execute UI tests and iterate"
-git commit -m "Q5.15: Demonstrate application to client"
-
+git add .
+git commit -m "Q5: Complete tasks Q5.1 to Q5.15"
 git push origin Q5-fix
