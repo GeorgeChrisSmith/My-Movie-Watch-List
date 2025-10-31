@@ -1,26 +1,34 @@
 # 1. Create and switch to a new branch
 git checkout -b Q5-fix
 
-# 2. Commit Q5.1-Q5.3
+# 2. Commit Q5.1-Q5.3 (adds a small marker)
+printf "\n<!-- COMMIT-MARKER: Q5.1-Q5.3 -->\n" >> q5-1FULL.txt
 git add q5-1FULL.txt
 git commit -m "Q5.1-Q5.3: Record repository details, UI requirements, HTML guidelines"
 
 # 3. Commit Q5.4-Q5.6
+printf "\n<!-- COMMIT-MARKER: Q5.4-Q5.6 -->\n" >> q5-1FULL.txt
 git add q5-1FULL.txt
 git commit -m "Q5.4-Q5.6: Record software tools, build wireframe, update wireframe"
 
 # 4. Commit Q5.7-Q5.9
+printf "\n<!-- COMMIT-MARKER: Q5.7-Q5.9 -->\n" >> q5-1FULL.txt
 git add q5-1FULL.txt
 git commit -m "Q5.7-Q5.9: Create UI theme, prototype, update prototype"
 
 # 5. Commit Q5.10-Q5.12
+printf "\n<!-- COMMIT-MARKER: Q5.10-Q5.12 -->\n" >> q5-1FULL.txt
 git add q5-1FULL.txt
 git commit -m "Q5.10-Q5.12: Record content flow, UI languages, build UI files"
 
 # 6. Commit Q5.13-Q5.15
+printf "\n<!-- COMMIT-MARKER: Q5.13-Q5.15 -->\n" >> q5-1FULL.txt
 git add q5-1FULL.txt
 git commit -m "Q5.13-Q5.15: Develop test cases, execute tests, demonstrate application"
 
-# 7. Push the branch
-git push origin Q5-fix
+# 7. Remove the old individual files (if they exist locally) so repo is tidy
+git rm -f q5-1.txt q5-2.txt q5-3.txt q5-4.txt q5-5.txt q5-6.txt q5-7.txt || true
+git commit -m "Remove old individual Q5 files" || true
 
+# 8. Push the new branch to GitHub
+git push origin Q5-fix
