@@ -1,15 +1,1 @@
-Q5.1: Record GitHub repository details
-Q5.2: Gather and confirm UI requirements
-Q5.3: Record HTML guideline documentation
-Q5.4: Record software tools for prototype
-Q5.5: Build wireframe
-Q5.6: Update wireframe with client feedback
-Q5.7: Create UI theme
-Q5.8: Create prototype
-Q5.9: Update prototype with client feedback
-Q5.10: Record content flow / UI events
-Q5.11: Record UI languages
-Q5.12: Build UI files
-Q5.13: Develop UI test cases
-Q5.14: Execute UI tests and iterate
-Q5.15: Demonstrate application to client
+// Q5.1: Recorded GitHub repository details
