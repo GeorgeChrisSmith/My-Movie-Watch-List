@@ -1,0 +1,2 @@
+
+movies.sort((a, b) => a.movieID - b.movieID);
