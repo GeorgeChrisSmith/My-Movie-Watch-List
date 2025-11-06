@@ -1,0 +1,27 @@
+// Binary Search Algorithm
+function binarySearch(movies, targetID) {
+    let left = 0;
+    let right = movies.length - 1;
+
+    while (left <= right) {
+        let mid = Math.floor((left + right) / 2);
+        let midID = movies[mid].movieID;
+
+        if (midID === targetID) {
+            return movies[mid]; // ✅ Found the movie
+        } else if (midID < targetID) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+
+    return null; // ❌ Not found
+}
+
+// ✅ Example tests
+console.log("Search for Movie ID 106:");
+console.log(binarySearch(movies, 106)); // Should find Red Dog
+
+console.log("Search for Movie ID 120:");
+console.log(binarySearch(movies, 120)); // Should return null (not found)
